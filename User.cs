@@ -9,11 +9,14 @@ namespace ooping_csharp
         public string Name;
         public string LastName;
         
-        public void Output()
+        public void Output(int times)//passing the arguments to reapeatedly writeline
         {
-            Console.WriteLine(Name);
-            Console.WriteLine(LastName);
+            for (int i = 0; i < times; i++)
+            {
+                Console.WriteLine(Name);
+                Console.WriteLine(LastName);
 
+            }
         }
         
     }
