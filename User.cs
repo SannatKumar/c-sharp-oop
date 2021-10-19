@@ -9,5 +9,12 @@ namespace ooping_csharp
         public string Name;
         public string LastName;
         
+        public void Output()
+        {
+            Console.WriteLine(Name);
+            Console.WriteLine(LastName);
+
+        }
+        
     }
 }
