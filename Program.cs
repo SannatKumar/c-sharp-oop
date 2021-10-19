@@ -16,7 +16,8 @@ namespace ooping_csharp
             User me = new User();
             me.Name = "Raj Kumar";
             me.LastName = "Tiwari";
-            me.Output();//prints the output from the function inside User classs
+            me.Output(5);//prints the output 5 times from the function inside User classs
+            //me.Output();//prints the output from the function inside User classs
             //Console.WriteLine(me.Name);
             //Console.WriteLine(me.LastName);
 
