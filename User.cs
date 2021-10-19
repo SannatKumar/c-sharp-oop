@@ -6,7 +6,14 @@ namespace ooping_csharp
 {
     public class User
     {
-        public string Name;
+        string _firstName = "hei There";
+        public string FirstName
+        {
+            get
+            {
+                return _firstName.ToLower();
+            }
+        }
         public string LastName;
         
         public string Output(int times)//passing the arguments to reapeatedly writeline
@@ -15,7 +22,7 @@ namespace ooping_csharp
 
             for (int i = 0; i < times; i++)
             {
-                message += Name + " " + LastName + "\n";
+                message += FirstName + " " + LastName + "\n";
             }
             return message;
         }
