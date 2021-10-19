@@ -15,7 +15,8 @@ namespace ooping_csharp
         {
             User me = new User();
             me.Name = "Raj Kumar";
-            Console.WriteLine(me.Name);
+            me.LastName = "Tiwari";
+            Console.WriteLine(me.Name +" "+ me.LastName);
             
         }
     }
