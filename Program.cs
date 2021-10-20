@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace ooping_csharp
 {
@@ -23,6 +24,19 @@ namespace ooping_csharp
             //me.Output();//prints the output from the function inside User classs
             //Console.WriteLine(me.Name);
             //Console.WriteLine(me.LastName);
+
+
+            User you = new User();
+            you.FirstName = "Agrima";
+            you.LastName = "KC";
+
+            List<User> users = new List<User>();
+            users.Add(me); users.Add(you);
+
+            foreach(User currentUser in users)
+            {
+                Console.WriteLine(currentUser.FullName);
+            }
 
         }
     }
