@@ -6,15 +6,17 @@ namespace ooping_csharp
 {
     public class User
     {
-        string _firstName = "hei There";
-        public string FirstName
+        
+        public string FullName
         {
             get
             {
-                return _firstName.ToLower();
+                return FirstName + " " + LastName;
             }
         }
-        public string LastName;
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        
         
         public string Output(int times)//passing the arguments to reapeatedly writeline
         {
