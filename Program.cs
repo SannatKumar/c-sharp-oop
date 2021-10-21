@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Xml.Serialization;
 using System.Collections.Generic;
+using System.Xml;
 
 namespace ooping_csharp
 {
@@ -48,8 +49,11 @@ namespace ooping_csharp
                 MI = "A"
             };
 
-            System.Xml.Serialization.XmlSerializer mySerializeFile = new System.Xml.Serialization.XmlSerializer(dataClsPerson.GetType());
-            mySerializeFile.Serialize(Console.Out, dataClsPerson);
+            System.Xml.Serialization.XmlSerializer mySerializeFile = new System.Xml.Serialization.XmlSerializer(typeof(clsPerson));
+            var path = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "//UserDetails.xml";
+            System.IO.FileStream file = System.IO.File.Create(path);
+            mySerializeFile.Serialize(file, dataClsPerson);
+            file.Close();
             Console.WriteLine();
             Console.ReadLine();
 
