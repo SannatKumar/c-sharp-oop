@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Xml.Serialization;
 using System.Collections.Generic;
 
 namespace ooping_csharp
@@ -37,6 +38,20 @@ namespace ooping_csharp
             {
                 Console.WriteLine(currentUser.FullName);
             }
+
+            //clsPerson
+
+            clsPerson dataClsPerson = new clsPerson
+            {
+                FirstName = "Poshan",
+                LastName = "Bahadur",
+                MI = "A"
+            };
+
+            System.Xml.Serialization.XmlSerializer mySerializeFile = new System.Xml.Serialization.XmlSerializer(dataClsPerson.GetType());
+            mySerializeFile.Serialize(Console.Out, dataClsPerson);
+            Console.WriteLine();
+            Console.ReadLine();
 
         }
     }
